@@ -143,7 +143,7 @@ print ('Solved pi_min = {:.3f} and pi_max = {:.3f}'.format(clip_pi,1-clip_pi))
 hyper_parameters = {'scb_acts':0.15, 'ascb_acts':0.05, 'mobile_acts':60,\
                     'scb_bose':0.2, 'ascb_bose':0.2, 'mobile_bose':120,\
                     'scb_linucb':0.03, 'ascb_linucb':0.02, 'mobile_linucb':95,\
-                    'nonlinear_acts':0.05, 'non_linear_bose':0.2,'nonlinear_linucb':0.02}
+                    'nonlinear_acts':0.05, 'nonlinear_bose':0.2,'nonlinear_linucb':0.02}
 
 ### ========================= Running Simulations ========================= ###
 if alg=='fix_pi':

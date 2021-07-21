@@ -1,6 +1,6 @@
 # Power Constrained Bandits
 
-Public repo containing code for simulations, bandit algorithms, wrapper algorithms for paper 
+Public repo containing code for simulations, bandit algorithms, wrapper algorithms for paper "Power Constrained Bandits"
 
 # Overview
 
@@ -11,20 +11,20 @@ This repo is based on the following academic publication:
 
 ### Contents
 
-* [environments/]
-* * Provided environments.
+* [environments.py](https://github.com/dtak/power-constrained-bandits-public/blob/main/environments.py)
+** Provided environments for simulations including SCB, ASCB, HeartSteps
   
-* [algorithms/]
-* * algorithms
+* [algorithms.py]
+** Provided algorithms used as baselines (ACTS, BOSE, LinUCB)
  
-* [wrappers/](https://github.com/dtak/power-constrained-bandits-public/)
-* * wrappers
+* [wrappers_algs.py](https://github.com/dtak/power-constrained-bandits-public/)
+** wrappers
 
 # Installation
 
 * Step 1: Clone this repo
 
-git clone https://github.com/dtak/prediction-constrained-topic-models/
+git clone https://github.com/dtak/power-constrained-bandits-public/
 
 * Step 2: Setup a fresh conda enviroment with all required Python packages
 
