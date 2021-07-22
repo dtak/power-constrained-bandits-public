@@ -26,59 +26,60 @@ python>=3.5, numpy, argparse, scipy
 ## Examples
 For a quick test for the set up of the code, run `sh main.sh`
 It may take ~20min to run 1,000 simulations
+### More Examples
 ### Python script to run power simulations
 The main script to run power analyses simulations on SCB environment with ACTS algorithm  and probability-clipping meta-algorithm
 ```
-python run_exp.py -S 1000\ #number of simulations
--env scb\ # environments (options: scb, ascb, mobile, nonlinear)
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power # experiment type (options: power,type_i_error)
+python run_exp.py --S 1000 `# number of total simulations`\
+--env scb `# environments (options: scb, ascb, mobile, nonlinear)`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`
 ```
 ### Python script to run robustness test for mis-estimated treatment effect size
 ```
-python run_exp.py -S 1000\ #number of simulations
--env scb\ # environments (options: scb, ascb, mobile, nonlinear)
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power\ # experiment type (options: power,type_i_error)
--effect_size large # estimated noise size (options: none, small, large)
+python run_exp.py --S 1000 `# number of total simulations`\
+--env scb `# environments (options: scb, ascb, mobile, nonlinear)`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`\
+-effect_size large `# estimated treatment_effect size (options: none, small, large)`
 ```
 ### Python script to run robustness test for mis-estimated noise size
 ```
-python run_exp.py -S 1000\ #number of simulations
--env scb\ # environments (options: scb, ascb, mobile, nonlinear) 
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power\ # experiment type (options: power,type_i_error)
--noise_size large # estimated noise size (options: none, small, large)
+python run_exp.py --S 1000 `# number of total simulations`\
+--env scb `# environments (options: scb, ascb, mobile, nonlinear)`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`\
+-noise_size large `# estimated noise size (options: none, small, large)`
 ```
 ### Python script to run robustness test for mis-specified marginal reward model
 ```
-python run_exp.py -S 1000\ #number of simulations
--env scb\ # environments (options: scb, ascb, mobile, nonlinear) 
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power\ # experiment type (options: power,type_i_error)
---approx # approximate marginal reward model 
+python run_exp.py --S 1000 `# number of total simulations`\
+--env scb `# environments (options: scb, ascb, mobile, nonlinear)`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`\
+--approx `# approximate marginal reward model with B_nt=1`
 ```
 
 ### Python script to run robustness test for mis-specified treatment effect model
 ```
-python run_exp.py -S 1000\ #number of simulations
--env scb\ # environments (options: scb, ascb, mobile, nonlinear) 
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power\ # experiment type (options: power,type_i_error)
---drop # drop_last_dimension 
+python run_exp.py --S 1000 `# number of total simulations`\
+--env scb `# environments (options: scb, ascb, mobile, nonlinear)`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`\
+--drop `# drop_last_dimension`
 ```
 
 ```
-python run_exp.py -S 1000\ #number of simulations
--env nonlinear\ # approximate ascb with a linear function 
--alg acts\ # algorithms (options: fix_pi, acts, bose, linucb) 
--wrapper clip\ # wrapper algorithms (options: none, clip, drop, flip)
--experiment power # experiment type (options: power,type_i_error)
+python run_exp.py --S 1000 `# number of total simulations`\
+--env nonlinear `# approximate ASCB with a linear function`\
+--alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
+--wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
+--experiment power `# experiment type (options: power,type_i_error)`\
 ```
 
 
