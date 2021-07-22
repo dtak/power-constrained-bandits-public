@@ -20,6 +20,12 @@ This repo is based on the following academic publication:
 * [wrappers_algs.py](https://github.com/dtak/power-constrained-bandits-public/blob/main/wrapper_algs.py)
     * Provided meta-algorithms we developed including probability clipping, data dropping and action flipping
 
+* [utils.py](https://github.com/dtak/power-constrained-bandits-public/blob/main/utils.py)
+    * Provided utility functions to calculate test statistics, reward, regret etc
+
+* [run_exp.py](https://github.com/dtak/power-constrained-bandits-public/blob/main/run_exp.py)
+    * Main scripts to run simulations
+
 ## Library Requirements
 python>=3.5, numpy, argparse, scipy
 

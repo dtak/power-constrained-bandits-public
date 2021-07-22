@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.stats import norm,bernoulli
-import ipdb
 
 class ActionCenteredThompsonSampling(object):
     """

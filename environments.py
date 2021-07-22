@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.stats import norm,t,gamma,ncx2,chi2,bernoulli
-import ipdb
 
 
 ############## Environments for simulations ############

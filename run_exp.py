@@ -3,21 +3,21 @@ import numpy as np
 from wrapper_algs import *
 from utils import *
 from environments import *
-import pickle
+# import pickle
 import argparse
 
 # argument parser
-parser = argparse.ArgumentParser()
-parser.add_argument('-S',type=int,default=1000) # number of total simulations
-parser.add_argument('-env',type=str,default='scb', choices = ['scb', 'ascb', 'mobile', 'nonlinear']) # environments (options: scb, ascb, mobile, nonlinear) 
-parser.add_argument('-alg',type=str,default='fix_pi', choices = ['fix_pi', 'acts', 'bose', 'linucb']) # algorithms (options: fix_pi, acts, bose, linucb)
-parser.add_argument('-wrapper',type=str,default='clip', choices = ['none', 'clip', 'drop', 'flip']) # wrapper algorithms (options: none, clip, drop, flip)
-parser.add_argument('-experiment',type=str,default='power',choices = ['none','type_i']) # experiment type (options: power)
+parser = argparse.ArgumentParser('argment parser')
+parser.add_argument('--S',type=int,default=1000) # number of total simulations
+parser.add_argument('--env',type=str,default='scb', choices = ['scb', 'ascb', 'mobile', 'nonlinear']) # environments (options: scb, ascb, mobile, nonlinear) 
+parser.add_argument('--alg',type=str,default='fix_pi', choices = ['fix_pi', 'acts', 'bose', 'linucb']) # algorithms (options: fix_pi, acts, bose, linucb)
+parser.add_argument('--wrapper',type=str,default='clip', choices = ['none', 'clip', 'drop', 'flip']) # wrapper algorithms (options: none, clip, drop, flip)
+parser.add_argument('--experiment',type=str,default='power',choices = ['power','type_i']) # experiment type (options: power, type_i)
 
-parser.add_argument('--drop_last_dimension',dest='drop', action='store_true', default=False) # if drop last dimension of treatment effect feature vector Z_nt
+parser.add_argument('--drop',dest='drop', action='store_true', default=False) # if drop last dimension of treatment effect feature vector Z_nt
 parser.add_argument('--approx',dest='approx', action='store_true', default=False) # if approximate marginal reward model as B_nt=1
-parser.add_argument('-noise_size',type=str,default='none', choices =['small','none','large']) # estimated noise size (options: none, small, large)
-parser.add_argument('-effect_size',type=str,default='none', choices =['small','none','large']) # estimated treatment effect size (options: none, small, large)
+parser.add_argument('--noise_size',type=str,default='none', choices =['small','none','large']) # estimated noise size (options: none, small, large)
+parser.add_argument('--effect_size',type=str,default='none', choices =['small','none','large']) # estimated treatment effect size (options: none, small, large)
 
 args = parser.parse_args()
 S = args.S

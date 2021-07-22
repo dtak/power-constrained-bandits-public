@@ -1,7 +1,6 @@
 from environments import *
 from utils import *
 from algorithms import *
-import ipdb
 
 # fixed pi algorithm
 def fixed_pi(bandit,delta,f,Z,alpha,beta,N,T,pi_fix = 0.5,S=1000,approx=False):
