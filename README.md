@@ -49,7 +49,7 @@ python run_exp.py --S 1000 `# number of total simulations`\
 --alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
 --wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
 --experiment power `# experiment type (options: power,type_i_error)`\
--effect_size large `# estimated treatment_effect size (options: none, small, large)`
+--effect_size large `# estimated treatment_effect size (options: none, small, large)`
 ```
 ### Python script to run robustness test for mis-estimated noise size
 ```
@@ -58,7 +58,7 @@ python run_exp.py --S 1000 `# number of total simulations`\
 --alg acts `# algorithms (options: fix_pi, acts, bose, linucb)`\
 --wrapper clip `# wrapper algorithms (options: none, clip, drop, flip)`\
 --experiment power `# experiment type (options: power,type_i_error)`\
--noise_size large `# estimated noise size (options: none, small, large)`
+--noise_size large `# estimated noise size (options: none, small, large)`
 ```
 ### Python script to run robustness test for mis-specified marginal reward model
 ```
