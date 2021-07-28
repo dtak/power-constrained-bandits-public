@@ -7,7 +7,7 @@ Public repo containing code for simulations, bandit algorithms, wrapper algorith
 This repo is based on the following academic publication:
 
 
-* Paper PDF: https://arxiv.org/abs/2004.06230v3
+* Paper PDF: https://arxiv.org/abs/2004.06230
 
 ### Contents
 
